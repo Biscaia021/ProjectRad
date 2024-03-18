@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Index</h1>
+    <button type="button" class="button" id="button" hx-get="/replace" hx-target=".replace" hx-swap="innerHTML">button</button>
+    <div class="replace">
+        <p>{{ lipsum(n=5, html=True, min=20, max=100) }}</p>
+    </div>
+{% endblock %}
